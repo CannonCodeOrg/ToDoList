@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import Navigation from "./components/Navigation";
+import Content from "./components/Content";
 
 function App() {
   return (
     <Router>
-      <Navigation />
+      <Content />
     </Router>
   );
 }
