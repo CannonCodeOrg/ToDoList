@@ -1,2 +1,3 @@
 Poprawienie CSS w Calendar
 Poprawienie kalendarza aby nie zasłaniał go navbar
+Poprawienie błędu z dodawaniem eventów week
