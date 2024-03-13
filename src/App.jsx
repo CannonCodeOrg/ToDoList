@@ -21,7 +21,7 @@ function App() {
         // kontent widoczny przed zalogowaniem
         <div className="video-background">
           <video autoPlay loop className="video">
-            <source src="./assets/videos/jezus.mp4" type="video/mp4" />
+            <source src="./assets/videos/jezus2.mp4" type="video/mp4" />
           </video>
           <div className="video-overlay"></div>
           <div className="login-container">
