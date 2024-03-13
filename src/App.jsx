@@ -4,7 +4,7 @@ import Content from "./components/Content";
 import Login from "./components/Login";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); //w useState() dać true, żeby widzieć stronę po zalogowaninu
+  const [isLoggedIn, setIsLoggedIn] = useState(true); //w useState() dać true, żeby widzieć stronę po zalogowaninu
 
   const handleLogin = () => {
     setIsLoggedIn(true);

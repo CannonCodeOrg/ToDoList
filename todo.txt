@@ -1,5 +1,4 @@
-Poprawienie CSS w Calendar
-Poprawienie kalendarza aby nie zasłaniał go navbar
-Poprawienie błędu z dodawaniem eventów week
 Zrobienie działającego systemu logowanie
 Ładny design strony logowania
+Stworzeneie komponentu dla dnia (/moze poprawienie layout(miesiaca))
+Stworzenie Jakiegos czegoś na góre żeby wyglądało A-ok!
