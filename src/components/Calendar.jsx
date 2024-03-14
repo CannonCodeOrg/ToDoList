@@ -14,7 +14,7 @@ function Calendar() {
 
   return (
     <div>
-      <div className="calendar-grid grid grid-cols-5 grid-rows-3 gap-6 justify-center">
+      <div className="calendar-grid grid grid-cols-5 grid-rows-3 gap-3 justify-center">
         {months.map((month, index) => (
           <Link
             key={index}

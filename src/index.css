@@ -83,12 +83,11 @@ body {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(2, 1fr); 
-  gap: 20px; 
+  grid-template-rows: repeat(2, 1fr);  
 }
 
 .month-button {
-  @apply p-2 bg-slate-800 w-[6rem] h-[6rem] rounded-md hover:text-teal-500 duration-300 hover:shadow-teal-600 border-2 hover:border-teal-600 border-transparent;
+  @apply p-2 bg-slate-800 w-[8rem] h-[8rem] rounded-md hover:text-teal-500 duration-300 hover:shadow-teal-600 border-2 hover:border-teal-600 border-transparent;
 }
 
 .month-button:hover {
