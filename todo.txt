@@ -1,4 +1,5 @@
 Zrobienie działającego systemu logowanie
 Ładny design strony logowania
-Stworzeneie komponentu dla dnia (/moze poprawienie layout(miesiaca))
 Stworzenie Jakiegos czegoś na góre żeby wyglądało A-ok!
+Dodanie mozliwosci dodavania eventow/tagow
+Polaczenie Calendar & CalendarDays do App.jsx
