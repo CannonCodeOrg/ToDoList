@@ -23,17 +23,21 @@ const Content = () => {
 
       {/* NAVIGATION */}
 
-      <ul className={`nav-links ${isNavShown ? "show-nav-animation" : "hide-nav-animation"}`}>
-        <Link to="/" className="nav-link">
+      <ul
+        className={`nav-links ${
+          isNavShown ? "show-nav-animation" : "hide-nav-animation"
+        }`}
+      >
+        <Link to="/" className="nav-link" onClick={toggleNavDisplay}>
           Home
         </Link>
-        <Link to="/todo" className="nav-link">
+        <Link to="/todo" className="nav-link" onClick={toggleNavDisplay}>
           Todo
         </Link>
-        <Link to="/meetings" className="nav-link">
+        <Link to="/meetings" className="nav-link" onClick={toggleNavDisplay}>
           Meetings
         </Link>
-        <Link to="/calendar" className="nav-link">
+        <Link to="/calendar" className="nav-link" onClick={toggleNavDisplay}>
           Calendar
         </Link>
       </ul>
