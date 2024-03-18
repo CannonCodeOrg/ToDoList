@@ -4,6 +4,7 @@ import Home from "./Home";
 import Todo from "./Todo";
 import Meetings from "./Meetings";
 import Calendar from "./Calendar";
+import CalendarDays from "./CalendarDays";
 
 const Content = () => {
   const [isNavShown, setIsNavShown] = useState(false);
@@ -11,6 +12,8 @@ const Content = () => {
   const toggleNavDisplay = () => {
     setIsNavShown((prevDisplay) => !prevDisplay);
   };
+
+  const month = "February"
 
   return (
     <div className="text-slate-300">
@@ -24,16 +27,16 @@ const Content = () => {
       {/* NAVIGATION */}
 
       <ul className={`nav-links ${isNavShown ? "show-nav-animation" : "hide-nav-animation"}`}>
-        <Link to="/" className="nav-link">
+        <Link to="/" className="nav-link" onClick={toggleNavDisplay}>
           Home
         </Link>
-        <Link to="/todo" className="nav-link">
+        <Link to="/todo" className="nav-link" onClick={toggleNavDisplay}>
           Todo
         </Link>
-        <Link to="/meetings" className="nav-link">
+        <Link to="/meetings" className="nav-link" onClick={toggleNavDisplay}>
           Meetings
         </Link>
-        <Link to="/calendar" className="nav-link">
+        <Link to="/calendar" className="nav-link" onClick={toggleNavDisplay}>
           Calendar
         </Link>
       </ul>
@@ -45,6 +48,7 @@ const Content = () => {
           <Route path="/todo" element={<Todo />} />
           <Route path="/meetings" element={<Meetings />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path={`/calendar/CalendarDays/${month}`} element={<CalendarDays />} />
         </Routes>
       </div>
     </div>
