@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 body {
   @apply m-0 p-0 box-border bg-slate-900;
   font-family: "Manrope";
 }
 
+/* NAVBAR */
 .nav-links {
   @apply fixed p-2 gap-2 flex flex-col rounded-r-md;
   background-color: rgba(30, 41, 59, 0.4);
@@ -24,13 +25,16 @@ body {
 
 .show-nav-animation {
   transform: translateX(0%);
-  transition: .4s;
+  transition: 0.4s;
 }
 .hide-nav-animation {
   transform: translateX(-100%);
-  transition: .4s;
+  transition: 0.4s;
 }
 
+.nav-icon {
+  width: 40px;
+}
 
 /* LOGIN */
 .video-background {
@@ -77,13 +81,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(2, 1fr);  
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .month-button {
@@ -96,7 +99,133 @@ body {
 
 @media screen and (max-width: 768px) {
   .calendar-grid {
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
+}
+
+/* HOME PAGE */
+@keyframes containerAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.container-animation {
+  animation: containerAnimation 2s infinite ease-in-out;
+}
+
+@keyframes letterAnimation {
+  0% {
+    transform: scale(0) translateY(2em);
+    opacity: 0;
+  }
+  0% {
+    color: #008080;
+  }
+  5% {
+    color: #40e0d0;
+  }
+  10% {
+    color: #1e90ff;
+  }
+  15% {
+    color: #00ced1;
+  }
+  20% {
+    color: #5f9ea0;
+  }
+  25% {
+    color: #b0e0e6;
+    text-shadow: 0 0 0px #1f6f67, 0 0 10px #00ced1, 0 0 20px #5f9ea0,
+      0 0 40px #73f6e9;
+  }
+  30% {
+    color: #add8e6;
+  }
+  35% {
+    color: #00ced1;
+  }
+  40% {
+    color: #2fffea;
+    /* transform: translateY(1.5em); */
+  }
+  45% {
+    color: #7bfff2;
+  }
+  50% {
+    color: #008080;
+    transform: scale(2.2);
+    letter-spacing: 1.4em;
+    opacity: 1;
+  }
+  55% {
+    color: #008080;
+    text-shadow: 0 0 4px #40e0d0, 0 0 0 #40e0d0, 0 0 0px #067b70,
+      0 0 40px #008080;
+  }
+  60% {
+    color: #40e0d0;
+  }
+  65% {
+    color: #00ced1;
+  }
+  70% {
+    color: #008080;
+  }
+  75% {
+    color: #40e0d0;
+    transform: translateY(1.5em);
+  }
+  80% {
+    color: #109285;
+  }
+  85% {
+    color: #40e0d0;
+    text-shadow: 0 0 4px #40e0d0, 0 0 30px #00ced1, 0 0 20px #008080,
+      0 0 0px #038f92;
+  }
+  90% {
+    color: #40e0d0;
+  }
+  95% {
+    color: #00ced1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    color: #40e0d0;
+  }
+}
+
+.letter-animation {
+  display: inline-block;
+  animation: letterAnimation 3.5s ease-in-out infinite;
+  text-shadow: 0 0 4px #9bfff5, 0 0 10px #75d5cb, 0 0 20px #40e0d0,
+    0 0 40px #40e0d0;
+  opacity: 0;
+}
+
+/* TODO PAGE */
+@keyframes flameAnimation {
+  25% {
+    transform: rotate(-15deg) translateY(10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(0px) scale(1.1);
+  }
+  75% {
+    transform: rotate(15deg) translateY(10px) translateX(-5px);
+  }
+}
+.flame {
+  animation: flameAnimation 1.5s ease infinite;
 }

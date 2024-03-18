@@ -2,4 +2,7 @@ Zrobienie działającego systemu logowanie
 Ładny design strony logowania
 Stworzenie Jakiegos czegoś na góre żeby wyglądało A-ok!
 Dodanie mozliwosci dodavania eventow/tagow
-Polaczenie Calendar & CalendarDays do App.jsx
+Polaczenie Calendar & CalendarDays do App.
+
+transform Section names into "SectionPage" names
+create pages folder and put every SectionPages here
