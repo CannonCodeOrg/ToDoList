@@ -15,8 +15,6 @@ const Content = () => {
     setIsNavShown((prevDisplay) => !prevDisplay);
   };
 
-  const month = "February"
-
   return (
     <div className="text-slate-300">
       <button
@@ -56,7 +54,7 @@ const Content = () => {
           <Route path="/todo" element={<TodoPage />} />
           <Route path="/meetings" element={<Meetings />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path={`/calendar/CalendarDays/${month}`} element={<CalendarDays />} />
+          <Route path={`/calendar/CalendarDays/:month`} element={<CalendarDays />} />
         </Routes>
       </div>
     </div>

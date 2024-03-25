@@ -48,7 +48,7 @@ const TodoPage = () => {
                 {tags.map((tag, index) => (
                   <div
                     key={index}
-                    className="font-bold rounded-md p-1 px-2 bg-cyan-900 w-fit"
+                    className="font-bold rounded-md p-1 px-2 bg-cyan-900 w-fit z-10"
                   >
                     {tag}
                   </div>
@@ -60,7 +60,7 @@ const TodoPage = () => {
                 {contributors.map((contributor, index) => (
                   <div
                     key={index}
-                    className="font-bold rounded-md p-1 bg-slate-900 w-fit"
+                    className="contributor"
                   >
                     {contributor}
                   </div>
