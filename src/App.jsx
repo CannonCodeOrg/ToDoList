@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Content from "./components/Content";
 import Login from "./components/Login";
+import Calendar from "./components/Calendar";
+import CalendarDays from "./components/CalendarDays";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); //w useState() dać true, żeby widzieć stronę po zalogowaninu
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true); //w useState() dać true, żeby widzieć stronę po zalogowaninu
 
   const handleLogin = (data) => {
     if (data.login === "cannoncode" && data.password === "siema") setIsLoggedIn(true)
@@ -15,6 +18,9 @@ function App() {
       {isLoggedIn ? (
         //kontent widoczny po zalogowaniu
         <Router>
+          <Routes>
+            <Route path="/Calendar/CalendarDays/:{month}"/>
+          </Routes>
           <Content />
         </Router>
       ) : (
