@@ -1,4 +1,3 @@
-// CalendarDays.jsx
 
 import React from 'react';
 import { useParams } from 'react-router-dom';
@@ -18,14 +17,7 @@ function CalendarDays({ onAddTask }) {
 
   const emptyCells = new Array(firstDayOfWeek).fill(null);
 
-  /*const handleAddTask = (day) => {
-    const task = {
-      day: day,
-      month: month,
-    };
-    onAddTask(task);
-  };
-*/
+
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-4xl mb-4">{month}</h2>
@@ -37,9 +29,7 @@ function CalendarDays({ onAddTask }) {
           <div key={`empty-${index}`} className="empty-cell"></div>
         ))}
         {daysOfMonth.map((day, index) => (
-          <button key={index} className="day-circle flex justify-center items-center rounded-full w-10 h-10 bg-cyan-500 text-white" onClick={() => handleAddTask(day)}>
-            {day}
-          </button>
+          <button key={index} className="day-circle flex justify-center items-center rounded-full w-10 h-10 bg-cyan-500 text-black"></button>
         ))}
       </div>
     </div>
